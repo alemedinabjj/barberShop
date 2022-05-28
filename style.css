@@ -185,6 +185,25 @@ span {
   top: -7.8%;
   left: -16.7%;
   z-index: -1;
+  animation: imgAnime 6s infinite;
+}
+
+@keyframes imgAnime {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  75% {
+    transform: rotateZ(0);
+  }
+  95% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0deg)
+  }
 }
 /* SERVICOS */
 #services h3 {
@@ -237,6 +256,8 @@ span {
     278deg,
     #f83c458a,
     #5a8ee857);
+
+    animation: changeBackgroundColor 2s infinite linear;
 }
 .dividier-2 {
   height: 5px;
@@ -244,7 +265,32 @@ span {
     278deg,
     #5a8ee857,
     #f83c458a);
+    animation: changeBackgroundColor2 2s infinite linear ;
 }
+
+@keyframes changeBackgroundColor2 {
+  0% {
+    background-color: #f83c458a;
+  }
+  50% {
+    background-color: #5a8ee857;
+  }
+  100% {
+    background-color: #f83c458a;
+  }
+}
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #5a8ee857;
+  }
+  50% {
+    background-color: #f83c458a;
+  }
+  100% {
+    background-color: #5a8ee857;
+  }
+}
+
 
 /*  ABOUT */
 #about h3 {
@@ -341,7 +387,29 @@ footer .logo {
 
 .btnTop.show {
   opacity: 1;
+
+  animation: btnAnime 1.5s ease infinite ;
 }
+.btnTop {
+  color: aliceblue;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+@keyframes btnAnime {
+  0% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+
+
 .menu {display: none;}
 
 
@@ -432,6 +500,9 @@ footer .logo {
   }
   .logo.scroll {
     transform: translateX(0);
+  }
+  .copy {
+    padding-inline: .5rem;
   }
 }
 
