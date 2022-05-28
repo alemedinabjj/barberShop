@@ -430,7 +430,9 @@ footer .logo {
   #bar3 {
     transform: translateY(18px);
   }
-
+  .logo.scroll {
+    transform: translateX(0);
+  }
 }
 
 @media (min-width: 781px) and (max-width: 1200px) {
