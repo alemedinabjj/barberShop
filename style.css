@@ -461,10 +461,21 @@ footer .logo {
   section {
     width: 95%;
   }
+  #home {
+    display: flex;
+    flex-direction: column;
+  }
+  #home .img {
+    margin-inline: auto;
+  }
+  #home .info_home {
+    width: 95%;
+    margin-inline: auto;
+  }
   .cards {
     display: flex;
     width: 95%;
-    gap: 1rem;
+    gap: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
