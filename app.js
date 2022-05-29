@@ -3,17 +3,16 @@ const segundaUl = document.querySelector('.segUl')
 service.addEventListener('mouseover', function () {
   segundaUl.classList.add('showUl')
 })
-service.addEventListener('mouseout', function(){
+service.addEventListener('mouseout', function () {
   segundaUl.classList.remove('showUl')
 })
 
-segundaUl.addEventListener('mouseover', function() {
+segundaUl.addEventListener('mouseover', function () {
   segundaUl.classList.add('showUl')
 })
-segundaUl.addEventListener('mouseout', function() {
+segundaUl.addEventListener('mouseout', function () {
   segundaUl.classList.remove('showUl')
 })
-
 
 const scrollReveal = ScrollReveal({
   origin: 'top',
@@ -22,28 +21,26 @@ const scrollReveal = ScrollReveal({
   reset: true
 })
 
-ScrollReveal().reveal('.headline, .img, .info_about, .img_about, .gradient, .card, .sociais, .contact_all, .info_home',
+ScrollReveal().reveal(
+  '.headline, .img, .info_about, .img_about, .gradient, .card, .sociais, .contact_all, .info_home',
 
-{interval: 100}
-);
+  { interval: 100 }
+)
 
 const btnTop = document.querySelector('.btnTop')
 
-function backTop(){
-
-    if(scrollY >= 560) {
-        btnTop.classList.add('show')
-    }else {
-        btnTop.classList.remove('show')
-    }
-
-
+function backTop() {
+  if (scrollY >= 560) {
+    btnTop.classList.add('show')
+  } else {
+    btnTop.classList.remove('show')
+  }
 }
 
 const menu = document.querySelector('#menubar')
 const nav = document.querySelector('.nav')
 
-menu.addEventListener('click', function() {
+menu.addEventListener('click', function () {
   nav.classList.toggle('showNav')
   menu.classList.toggle('change')
 })
@@ -55,7 +52,6 @@ Array.from(links).forEach(function (link) {
     nav.classList.remove('showNav')
   })
 })
-
 
 const sections = document.querySelectorAll('section[id]')
 function activateMenuAtCurrentSection() {
@@ -83,19 +79,40 @@ function activateMenuAtCurrentSection() {
 
 const header = document.querySelector('.header')
 const logo = document.querySelector('.header > .logo')
-const navHeight = header.offsetHeight;
+const navHeight = header.offsetHeight
 
 function changeHeaderWhenScroll() {
-    if(window.scrollY >= navHeight){
-        logo.classList.add('scroll')
-    }else {
-        logo.classList.remove('scroll')
-    }
+  if (window.scrollY >= navHeight) {
+    logo.classList.add('scroll')
+  } else {
+    logo.classList.remove('scroll')
+  }
 }
 
-
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   backTop()
   activateMenuAtCurrentSection()
   changeHeaderWhenScroll()
 })
+
+const btnService = document.querySelectorAll('#services button')
+const card = document.querySelectorAll('.card')
+
+console.log(card)
+
+Array.from(btnService).forEach((item, index) => {
+  item.addEventListener('click', () => {
+    showCard(item, index)
+    if (item.textContent === "+ Info") {
+      item.textContent = "Voltar";
+      item.value = "Voltar"
+  } else {
+      item.textContent = "+ Info";
+      item.value = "+ Info"
+  }
+  })
+})
+
+const showCard = (item, index) => {
+  card[index].classList.toggle('showInfo')
+}
