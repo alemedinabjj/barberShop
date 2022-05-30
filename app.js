@@ -22,7 +22,7 @@ const scrollReveal = ScrollReveal({
 })
 
 ScrollReveal().reveal(
-  '.headline, .img, .info_about, .img_about, .gradient, .card, .sociais, .contact_all, .info_home',
+  '.headline, .img, .info_about, .img_about, .gradient, .card, .sociais, .contact_all, .info_home, .swiper',
 
   { interval: 100 }
 )
@@ -98,7 +98,6 @@ window.addEventListener('scroll', function () {
 const btnService = document.querySelectorAll('#services button')
 const card = document.querySelectorAll('.card')
 
-console.log(card)
 
 Array.from(btnService).forEach((item, index) => {
   item.addEventListener('click', () => {
@@ -116,3 +115,30 @@ Array.from(btnService).forEach((item, index) => {
 const showCard = (item, index) => {
   card[index].classList.toggle('showInfo')
 }
+
+
+// SWIPER JS
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  autoplay: {
+    delay: 4000,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: "progressbar",
+  },
+  
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});

@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ESTILOS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
   <script src="app.js" defer ></script>
+  
   <title>BarberShop</title>
 </head>
 <body>
@@ -32,6 +38,7 @@
           </ul>
         </li>
         <li><a href="#about">Sobre</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
         <li><a href="#contact">Contato</a></li>
         <li><a href="" class="horarios">Ver horários</a></li>
       </ul>
@@ -45,6 +52,38 @@
       <h2>Homem também se cuida!</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque consequatur dignissimos amet laboriosam dolorum sit, quae quis id impedit explicabo ipsam enim accusantium laborum debitis autem eos quo a aliquam culpa doloremque. Doloribus, recusandae rerum?</p>
         <button>Agendar um Horário</button>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-card">
+              <div class="image_swiper">
+              <img src="https://randomuser.me/api/portraits/women/49.jpg" alt="">
+            </div>
+            <div class="info_swiper">
+              <h3>Mulher</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at velit nesciunt consectetur sit distinctio!</p>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-card">
+              <div class="image_swiper">
+                <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="">
+              </div>
+              <div class="info_swiper">
+                <h3>Homem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at velit nesciunt consectetur sit distinctio!</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-card">
+              <div class="image_swiper">
+                <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="">
+              </div>
+              <div class="info_swiper">
+                <h3>Mulher</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at velit nesciunt consectetur sit distinctio!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
     </div>
     
   </section>
@@ -111,6 +150,47 @@
     </div>
   </div>
   </section>
+  <div class="dividier-1"></div>
+  <section id="avaliacoes">
+    <h3 class="gradient">Avaliações</h3>
+    <h2>Avaliações de nossos clientes</h2>
+      <h5>Confira!</h5>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-card">
+            <div class="image_swiper">
+            <img src="https://randomuser.me/api/portraits/women/49.jpg" alt="">
+          </div>
+          <div class="info_swiper">
+            <h3>Mulher</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at velit nesciunt consectetur sit distinctio!</p>
+          </div>
+          </div>
+          <div class="swiper-slide swiper-card">
+            <div class="image_swiper">
+              <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="">
+            </div>
+            <div class="info_swiper">
+              <h3>Homem</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at velit nesciunt consectetur sit distinctio!</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-card">
+            <div class="image_swiper">
+              <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="">
+            </div>
+            <div class="info_swiper">
+              <h3>Mulher</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at velit nesciunt consectetur sit distinctio!</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+  </section>
+  <div class="dividier-2"></div>
   <section id="contact">
     <h3 class="gradient">Contato</h3>
     <div class="contact_all">
