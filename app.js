@@ -27,6 +27,7 @@ ScrollReveal().reveal(
   { interval: 100 }
 )
 
+
 const btnTop = document.querySelector('.btnTop')
 
 function backTop() {
@@ -37,15 +38,37 @@ function backTop() {
   }
 }
 
+const buttonMenu = document.querySelector('.hamburger')
+console.log(buttonMenu)
+
+buttonMenu.addEventListener('click', function () {
+  buttonMenu.classList.toggle('hamburger--collapse')
+  buttonMenu.classList.toggle('is-active')
+  nav.classList.toggle('showNav')
+})
+
+const verHorarios = document.querySelector('.horarios')
+const sectionHorarios = document.querySelector('.verhorarios')
+const buttonCloseHorarios = document.querySelector('.close')
+verHorarios.addEventListener('click', function() {
+  sectionHorarios.classList.add('showHorarios')
+})
+
+buttonCloseHorarios.addEventListener('click', function () {
+  sectionHorarios.classList.remove('showHorarios')
+})
+
 
 const nav = document.querySelector('.nav')
 
 
 const links = document.querySelectorAll('ul li a')
-
+console.log(links)
 Array.from(links).forEach(function (link) {
   link.addEventListener('click', function () {
     nav.classList.remove('showNav')
+    buttonMenu.classList.toggle('hamburger--collapse')
+    buttonMenu.classList.toggle('is-active')
   })
 })
 
@@ -139,22 +162,4 @@ const swiper = new Swiper('.swiper', {
 
 });
 
-const buttonMenu = document.querySelector('.hamburger')
-console.log(buttonMenu)
 
-buttonMenu.addEventListener('click', function () {
-  buttonMenu.classList.toggle('hamburger--collapse')
-  buttonMenu.classList.toggle('is-active')
-  nav.classList.toggle('showNav')
-})
-
-const verHorarios = document.querySelector('.horarios')
-const sectionHorarios = document.querySelector('.verhorarios')
-const buttonCloseHorarios = document.querySelector('.close')
-verHorarios.addEventListener('click', function() {
-  sectionHorarios.classList.add('showHorarios')
-})
-
-buttonCloseHorarios.addEventListener('click', function () {
-  sectionHorarios.classList.remove('showHorarios')
-})
