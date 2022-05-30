@@ -634,10 +634,25 @@ footer .logo {
   top: 0.2rem;
   right: 0.4rem;
   padding-inline: 1rem;
+  padding-block: 0.2rem;
+  border-radius: 0px 41.7298px;
+  border: none;
+  outline: none;
+  background: #ed4850;
+  color: aliceblue;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.verhorarios.showHorarios p, 
+.verhorarios.showHorarios h3 {
+  display: block;
 }
 .verhorarios p, h3 {
   opacity: 0;
   visibility: hidden;
+  display: none;
   transition: 1s ease;
 }
 .verhorarios.showHorarios p, .verhorarios.showHorarios h3 {
@@ -646,13 +661,9 @@ footer .logo {
   visibility: visible;
 }
 .close {
-  padding-block: 0.2rem;
-  border-radius: 0px 41.7298px;
-  border: none;
-  outline: none;
-  background: #ed4850;
-  color: aliceblue;
-  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 @media (max-width: 780px) {
   section {
