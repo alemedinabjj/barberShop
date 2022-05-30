@@ -37,13 +37,9 @@ function backTop() {
   }
 }
 
-const menu = document.querySelector('#menubar')
+
 const nav = document.querySelector('.nav')
 
-menu.addEventListener('click', function () {
-  nav.classList.toggle('showNav')
-  menu.classList.toggle('change')
-})
 
 const links = document.querySelectorAll('ul li a')
 
@@ -142,3 +138,12 @@ const swiper = new Swiper('.swiper', {
   },
 
 });
+
+const buttonMenu = document.querySelector('.hamburger')
+console.log(buttonMenu)
+
+buttonMenu.addEventListener('click', function () {
+  buttonMenu.classList.toggle('hamburger--collapse')
+  buttonMenu.classList.toggle('is-active')
+  nav.classList.toggle('showNav')
+})
