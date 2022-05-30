@@ -53,6 +53,14 @@ button {
   cursor: pointer;
   margin-inline: auto;
 }
+.button:hover, 
+.button:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 1rem transparent;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #ef6eae; }
+}
 .horarios {
   padding-inline: 2rem;
   padding-block: 0.5rem;
@@ -73,7 +81,7 @@ span {
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(20px);
   padding-inline: 1.5rem;
   border-radius: 10px;
   width: 68.875rem;
@@ -489,13 +497,13 @@ footer .logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: black;
+  background: #58595b;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   opacity: 0;
   transition: 0.3s ease;
-  background: linear-gradient(rgb(7, 0, 0) 0 0) padding-box,
+  background: linear-gradient(rgb(59, 58, 58) 0 0) padding-box,
   linear-gradient(to right, #f83c45, #5a8ee8)
       border-box;
 
