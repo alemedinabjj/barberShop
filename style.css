@@ -649,7 +649,7 @@ footer .logo {
 .verhorarios.showHorarios h3 {
   display: block;
 }
-.verhorarios p, h3 {
+.verhorarios p, .verhorarios h3 {
   opacity: 0;
   visibility: hidden;
   display: none;
