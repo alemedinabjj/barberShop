@@ -147,3 +147,14 @@ buttonMenu.addEventListener('click', function () {
   buttonMenu.classList.toggle('is-active')
   nav.classList.toggle('showNav')
 })
+
+const verHorarios = document.querySelector('.horarios')
+const sectionHorarios = document.querySelector('.verhorarios')
+const buttonCloseHorarios = document.querySelector('.close')
+verHorarios.addEventListener('click', function() {
+  sectionHorarios.classList.add('showHorarios')
+})
+
+buttonCloseHorarios.addEventListener('click', function () {
+  sectionHorarios.classList.remove('showHorarios')
+})

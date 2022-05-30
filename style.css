@@ -32,7 +32,7 @@ section {
   --height: 5.188rem;
   --menu-height: calc(5.188rem + var(--height));
 }
-button {
+button:not(.close, .hamburger) {
   padding-inline: 2rem;
   padding-block: 0.5rem;
   border-radius: 1rem;
@@ -601,6 +601,59 @@ footer .logo {
   display: none!important;
 }
 
+/*  ABA DE HORÁRIOS */
+.verhorarios {
+    width: 0px;
+    height: 0px;
+}
+.verhorarios.showHorarios {
+  width: 30rem;
+  height: 20rem;
+  background: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 0px 41.7298px;
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  padding-left: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(#ccc 0 0) padding-box,
+    linear-gradient(to right, #f83c45, #5a8ee8) border-box;
+  border: 4px solid transparent;
+  background-size: 400% 400%;
+  animation: cardBorderColor 4s infinite linear;
+  transition: width, height .3s ease;
+}
+
+.verhorarios.showHorarios .close {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.4rem;
+  padding-inline: 1rem;
+}
+.verhorarios p, h3 {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s ease;
+}
+.verhorarios.showHorarios p, .verhorarios.showHorarios h3 {
+  color: black;
+  opacity: 1;
+  visibility: visible;
+}
+.close {
+  padding-block: 0.2rem;
+  border-radius: 0px 41.7298px;
+  border: none;
+  outline: none;
+  background: #ed4850;
+  color: aliceblue;
+  cursor: pointer;
+}
 @media (max-width: 780px) {
   section {
     width: 95%;
@@ -684,6 +737,9 @@ footer .logo {
 
     position: relative;
     z-index: 20;
+  }
+  .verhorarios.showHorarios {
+    width: 95%;
   }
   #menubar {
     width: 40px;
